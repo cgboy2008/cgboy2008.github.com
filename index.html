@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+	<title>flexible box</title>
+	<style type="text/css">
+		ul,li{margin:0;padding:0;}
+		.flexbox{
+			height:200px;
+			padding:0px;
+			border: 1px solid #ccc;			
+			list-style:none;
+			display:flex;
+			
+		}
+
+		.flexbox li{
+			width:40px; 
+			height:40px;
+			background-color:#36c;
+			color:#fff;			
+			flex-grow:1;
+			flex-basis:100px;
+			text-align:center;
+			line-height:40px;
+			font-size:18px;
+			font-weight: bold;
+		}
+
+		.flexbox li:nth-child(1){background-color:yellowgreen;order:1;}
+		.flexbox li:nth-child(2){background-color:lightgreen;flex-shrink:2;order:3;}
+		.flexbox li:nth-child(3){background-color:orange;flex-shrink:3;order:2;}
+		.flexbox li:nth-child(4){background-color:pink;order:4;}
+		.flexbox li:nth-child(5){background-color:red;order:5;}		
+
+	</style>
+</head>
+<body>
+	<ul class="flexbox">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+
+	</ul>
+</body>
+</html>
